@@ -11,7 +11,6 @@ export default function HeroSection() {
 
     const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
-    // Set window dimensions after mount
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setWindowSize({ width: window.innerWidth, height: window.innerHeight });
@@ -35,14 +34,13 @@ export default function HeroSection() {
     }, [mouseX, mouseY]);
 
     const offset = 40;
-
     const x1 = useTransform(mouseX, val => (val - windowSize.width / 2) / offset);
     const y1 = useTransform(mouseY, val => (val - windowSize.height / 2) / offset);
     const x2 = useTransform(mouseX, val => (val - windowSize.width / 2) / -offset);
     const y2 = useTransform(mouseY, val => (val - windowSize.height / 2) / -offset);
 
     return (
-        <section className="relative flex items-center justify-center min-h-screen px-6 sm:px-20 py-24 bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-black dark:via-gray-900 dark:to-gray-950 font-[family-name:var(--font-geist-sans)] overflow-hidden">
+        <section className="relative flex items-center justify-center min-h-screen px-6 sm:px-20 py-24 bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-black dark:via-gray-900 dark:to-gray-950 font-sans overflow-hidden">
             {/* Background motion blobs */}
             <motion.div
                 className="absolute w-72 h-72 bg-blue-400/30 rounded-full blur-3xl z-0"

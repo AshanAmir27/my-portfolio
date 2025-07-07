@@ -1,14 +1,17 @@
-const config = {
-  darkMode: 'class',
-  content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
+// tailwind.config.js
+module.exports = {
+  darkMode: 'class', 
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}', // include all components/pages
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
-    extend: {},
+    extend: {
+        colors: {
+      background: 'var(--background)',
+      foreground: 'var(--foreground)',
+    },
+    },
   },
   plugins: [],
-   corePlugins: {
-   
-    scrollBehavior: true,
-  }
 };
-
-export default config;

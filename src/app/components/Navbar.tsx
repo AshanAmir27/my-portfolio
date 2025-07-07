@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-// import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,10 +21,10 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="fixed top-0 w-full z-50 backdrop-blur bg-white/70 dark:bg-black/70 shadow-sm border-b border-gray-200 dark:border-gray-800">
-            <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <nav className="fixed top-0  w-full z-50 backdrop-blur bg-[#000000d3]  shadow-sm border-b border-gray-200 dark:border-gray-800">
+            <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-6 ">
                 {/* Logo */}
-                <Link href="/" className="text-xl font-bold text-black dark:text-white">
+                <Link href="/" className="text-xl font-bold  dark:text-white">
                     My Portfolio
                 </Link>
 
@@ -44,7 +43,6 @@ export default function Navbar() {
                             </li>
                         ))}
                     </ul>
-                    {/* <ThemeToggle /> */}
                 </div>
 
                 {/* Mobile Toggle */}
@@ -73,7 +71,6 @@ export default function Navbar() {
                             </li>
                         ))}
                     </ul>
-                    {/* <ThemeToggle /> */}
                 </div>
             )}
         </nav>
