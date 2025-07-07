@@ -1,6 +1,6 @@
 // tailwind.config.js
 module.exports = {
-  darkMode: 'class', 
+  darkMode: 'media', 
   content: [
     './app/**/*.{js,ts,jsx,tsx}', // include all components/pages
     './components/**/*.{js,ts,jsx,tsx}',

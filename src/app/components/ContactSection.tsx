@@ -3,7 +3,6 @@
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 
-
 type FormData = {
     name: string;
     email: string;
@@ -36,15 +35,14 @@ export default function ContactSection() {
         }
     };
 
-
     return (
         <section
             id="contact"
-            className="py-24 px-6 sm:px-20 bg-white dark:bg-gray-950 font-[family-name:var(--font-geist-sans)]"
+            className="py-24 px-6 sm:px-20 bg-gray-950 text-white font-[family-name:var(--font-geist-sans)]"
         >
             <div className="max-w-3xl mx-auto text-center">
                 <motion.h2
-                    className="text-4xl font-bold text-gray-900 dark:text-white mb-4"
+                    className="text-4xl font-bold text-white mb-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -52,7 +50,7 @@ export default function ContactSection() {
                     Contact Me
                 </motion.h2>
                 <motion.p
-                    className="text-gray-600 dark:text-gray-400 mb-12"
+                    className="text-gray-400 mb-12"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.1 }}
@@ -69,22 +67,22 @@ export default function ContactSection() {
                 >
                     {/* Name */}
                     <div>
-                        <label className="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <label className="block mb-1 text-sm font-medium text-gray-300">
                             Name
                         </label>
                         <input
                             type="text"
                             {...register('name', { required: 'Name is required' })}
-                            className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none"
+                            className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none"
                         />
                         {errors.name && (
-                            <p className="text-red-600 text-sm mt-1">{errors.name.message}</p>
+                            <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
                         )}
                     </div>
 
                     {/* Email */}
                     <div>
-                        <label className="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <label className="block mb-1 text-sm font-medium text-gray-300">
                             Email
                         </label>
                         <input
@@ -96,25 +94,25 @@ export default function ContactSection() {
                                     message: 'Invalid email address',
                                 },
                             })}
-                            className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none"
+                            className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none"
                         />
                         {errors.email && (
-                            <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>
+                            <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
                         )}
                     </div>
 
                     {/* Message */}
                     <div>
-                        <label className="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <label className="block mb-1 text-sm font-medium text-gray-300">
                             Message
                         </label>
                         <textarea
                             rows={5}
                             {...register('message', { required: 'Message is required' })}
-                            className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none resize-none"
+                            className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none resize-none"
                         ></textarea>
                         {errors.message && (
-                            <p className="text-red-600 text-sm mt-1">{errors.message.message}</p>
+                            <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
                         )}
                     </div>
 
@@ -127,11 +125,9 @@ export default function ContactSection() {
                     </button>
 
                     {isSubmitSuccessful && (
-                        <p className="text-green-600 text-sm mt-3">Message sent successfully!</p>
+                        <p className="text-green-500 text-sm mt-3">Message sent successfully!</p>
                     )}
                 </motion.form>
-
-
             </div>
         </section>
     );

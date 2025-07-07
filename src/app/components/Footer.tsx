@@ -6,7 +6,7 @@ export default function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <footer className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-black text-gray-600 dark:text-gray-400 font-[family-name:var(--font-geist-sans)]">
+        <footer className="border-t border-gray-800 bg-black text-gray-400 font-[family-name:var(--font-geist-sans)]">
             <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
                 {/* Left: Copyright */}
                 <p className="text-sm text-center md:text-left">
@@ -14,12 +14,12 @@ export default function Footer() {
                 </p>
 
                 {/* Right: Social Icons */}
-                <div className="flex gap-6 text-gray-700 dark:text-gray-300">
+                <div className="flex gap-6 text-gray-300">
                     <a
                         href="https://github.com/AshanAmir27"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-[#333] dark:hover:text-white transition"
+                        className="hover:text-white transition"
                         aria-label="GitHub"
                     >
                         <Github size={20} />

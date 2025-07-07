@@ -7,7 +7,7 @@ export default function AboutSection() {
     return (
         <section
             id="about"
-            className="py-24 px-6 sm:px-20 bg-white dark:bg-gray-950 font-[family-name:var(--font-geist-sans)]"
+            className="py-24 px-6 sm:px-20 bg-gray-950 text-white font-[family-name:var(--font-geist-sans)]"
         >
             <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-16">
                 {/* Image */}
@@ -34,16 +34,14 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                        About Me
-                    </h2>
-                    <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                    <h2 className="text-4xl font-bold text-white mb-6">About Me</h2>
+                    <p className="text-lg text-gray-300 leading-relaxed">
                         I&apos;m Ashan Amer, a passionate software engineer who loves building modern web applications
                         with clean UI/UX, robust architecture, and smooth user interactions. My journey
                         began with curiosity about how websites work and turned into a career of turning
                         ideas into reality using code.
                     </p>
-                    <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
+                    <p className="mt-4 text-lg text-gray-300">
                         I enjoy working with JavaScript/TypeScript, React, Next.js, and diving into
                         backend systems with Node.js and databases. I&apos;m always learning and exploring new
                         tools to stay on top of modern development.
