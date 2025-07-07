@@ -29,7 +29,7 @@ export default function AboutSection() {
 
                 {/* Text Content */}
                 <motion.div
-                    className="text-center md:text-left"
+                    className="text-left"
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
@@ -41,7 +41,7 @@ export default function AboutSection() {
                         began with curiosity about how websites work and turned into a career of turning
                         ideas into reality using code.
                     </p>
-                    <p className="mt-4 text-lg text-gray-300">
+                    <p className="mt-4 text-lg text-gray-300 leading-relaxed">
                         I enjoy working with JavaScript/TypeScript, React, Next.js, and diving into
                         backend systems with Node.js and databases. I&apos;m always learning and exploring new
                         tools to stay on top of modern development.

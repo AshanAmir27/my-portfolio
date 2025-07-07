@@ -2,6 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
+import toast from 'react-hot-toast';
 
 type FormData = {
     name: string;
@@ -14,7 +15,7 @@ export default function ContactSection() {
         register,
         handleSubmit,
         reset,
-        formState: { errors, isSubmitSuccessful },
+        formState: { errors },
     } = useForm<FormData>();
 
     const onSubmit = async (data: FormData) => {
@@ -27,10 +28,12 @@ export default function ContactSection() {
 
             if (res.ok) {
                 reset();
+                toast.success('Message sent successfully!');
             } else {
-                console.error('Email failed to send');
+                toast.error('Failed to send message.');
             }
         } catch (err) {
+            toast.error('An unexpected error occurred.');
             console.error('Unexpected error:', err);
         }
     };
@@ -123,10 +126,6 @@ export default function ContactSection() {
                     >
                         Send Message
                     </button>
-
-                    {isSubmitSuccessful && (
-                        <p className="text-green-500 text-sm mt-3">Message sent successfully!</p>
-                    )}
                 </motion.form>
             </div>
         </section>
