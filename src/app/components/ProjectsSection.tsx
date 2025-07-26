@@ -10,7 +10,7 @@ const projects = [
             'A sleek and modern transcript request platform designed for educational institutions. Built with Next.js, Tailwind CSS, and Framer Motion, it supports dark mode, responsive layouts, and engaging animations to enhance user experience.',
         image: '/assets/project1.PNG',
         tech: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Framer Motion'],
-        link: 'https://your-portfolio-link.com',
+        link: 'https://jyh-transcript-agency.vercel.app/',
     },
     {
         title: 'Residential Portal',
