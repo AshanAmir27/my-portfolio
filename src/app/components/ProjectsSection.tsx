@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+
+
 const projects = [
     {
         title: 'JYH Transcript Agency',
@@ -18,9 +20,30 @@ const projects = [
             'A full-stack web application for managing residential communities. Features include real-time resident collaboration, service requests, announcements, and a dynamic drag-and-drop dashboard UI. Built with Next.js, Node.js, and MySQL.',
         image: '/assets/residential-portal.PNG',
         tech: ['Next.js', 'Node.js', 'MySQL', 'TypeScript'],
-        link: 'https://your-residential-portal-link.com',
+        link: 'https://github.com/AshanAmir27/residential-portal',
     },
-    // Add more projects here...
+    {
+        title : 'Paradise Nursary',
+        description :
+            'A responsive website for a local nursery, showcasing their plant collection and services. Built with React and Redux for managing states, it features a user-friendly design and interactive elements to engage visitors.',
+        image: '/assets/paradise.png',
+        tech:['React', 'Redux'],
+        link:"https://paradise-nursery-sage.vercel.app/"
+    },
+    {
+        title: 'Laundry App',
+        description:"A responsive website for a laudry workers, showcasing existing laudry sites available in your city. Built with React and Redux for managing states, it features a user-friendly design and interactive elements to engage visitors.",
+        image:'/assets/laundry.png',
+        tech:['React'],
+        link:"https://laundry-app-sigma.vercel.app/"
+    },
+    {
+        title: 'Hepta - Travel website',
+        description: "A responsive website for a travellers to find best places to must visit in their life. ",
+        image:'/assets/hepta.png',
+        tech:['React'],
+        link:"https://hepta-three.vercel.app/"
+    }
 ];
 
 export default function ProjectsSection() {
